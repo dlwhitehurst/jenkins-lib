@@ -1,4 +1,4 @@
-package com.dlwhitehurst.beast.jenkins
+package com.ms3_inc.tavros.jenkins
 
 class Utilities {
     private final workflow
