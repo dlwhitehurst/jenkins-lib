@@ -1,0 +1,3 @@
+@Library("beast-library") _
+
+camelwebservice()
