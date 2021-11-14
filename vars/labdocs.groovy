@@ -48,8 +48,10 @@ def call() {
             stage('Build and Package Project') {
                 steps  {
                     sh 'cd labdocs'
-                    script {
-                        utils.packageProject()
+                    container('maven') {
+                        script {
+                            utils.packageProject()
+                        }
                     }
                 }
             }
