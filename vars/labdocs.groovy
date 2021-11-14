@@ -11,12 +11,6 @@ def call() {
                     kind: Pod
                     spec:
                       containers:
-                      - name: builder
-                        image: fedora
-                        command:
-                        - sleep
-                        args:
-                        - infinity
                       - name: maven
                         image: maven:3.6.3-jdk-11
                         securityContext:
@@ -26,7 +20,7 @@ def call() {
                         args:
                         - infinity
                 '''
-                defaultContainer 'builder'
+                defaultContainer 'maven'
             }
         }
         stages {
