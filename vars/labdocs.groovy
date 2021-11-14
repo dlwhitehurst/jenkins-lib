@@ -12,7 +12,7 @@ def call() {
                     spec:
                       containers:
                       - name: builder
-                        image: fedora
+                        image: ubuntu
                         command:
                         - sleep
                         args:
@@ -22,10 +22,10 @@ def call() {
             }
         }
         stages {
-            stage('Create RSA Public/Private Key') {
+            stage('Configure Build Agent') {
                 steps {
                     script {
-                        utils.createKeys()
+                        utils.configureAgent()
                     }
                     sh 'cat ~/.ssh/id_rsa.pub'
                 }

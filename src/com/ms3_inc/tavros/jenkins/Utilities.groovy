@@ -37,7 +37,7 @@ class Utilities {
         shResource "maven-package.sh"
     }
 
-    def createKeys() {
-        shResource "generate-rsa-keys.sh"
+    def configureAgent() {
+        shResource "configure-agent.sh"
     }
 }
