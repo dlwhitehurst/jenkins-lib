@@ -12,7 +12,7 @@ def call() {
                     spec:
                       containers:
                       - name: builder
-                        image: ubuntu
+                        image: adoptopenjdk/maven-openjdk11
                         command:
                         - sleep
                         args:
