@@ -11,16 +11,14 @@ def call() {
                     kind: Pod
                     spec:
                       containers:
-                      - name: maven
-                        image: maven:3.6.3-jdk-11
-                        securityContext:
-                          runAsUser: 1000
+                      - name: builder
+                        image: fedora
                         command:
                         - sleep
                         args:
                         - infinity
                 '''
-                defaultContainer 'maven'
+                defaultContainer 'builder'
             }
         }
         stages {
@@ -42,10 +40,8 @@ def call() {
             stage('Build and Package Project') {
                 steps  {
                     sh 'cd labdocs'
-                    container('maven') {
-                        script {
-                            utils.packageProject()
-                        }
+                    script {
+                        utils.packageProject()
                     }
                 }
             }
