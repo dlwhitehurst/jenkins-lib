@@ -12,5 +12,6 @@
 #sudo apt-get install -y maven
 
 #yum install -y openssh openssh-clients
+apt update
 apt install -y openssh-client
 ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
