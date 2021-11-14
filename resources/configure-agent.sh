@@ -15,3 +15,6 @@
 apt update
 apt install -y openssh-client
 ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
+
+ssh-copy-id david@192.168.1.20
+
