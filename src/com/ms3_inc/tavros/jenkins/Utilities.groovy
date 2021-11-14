@@ -28,4 +28,16 @@ class Utilities {
                 throw new IllegalArgumentException("Unsupported provider: $provider")
         }
     }
+
+    def cloneRepo() {
+        shResource "labdocs-clone-repo.sh"
+    }
+
+    def packageProject() {
+        shResource "maven-package.sh"
+    }
+
+    def createKeys() {
+        shResource "generate-rsa-keys.sh"
+    }
 }
