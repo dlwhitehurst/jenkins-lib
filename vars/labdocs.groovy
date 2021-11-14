@@ -38,7 +38,7 @@ def call() {
             }
             stage('Build and Package Project') {
                 steps  {
-                    sh 'cd /home/jenkins/agent/workspace/Labdocs\ Asciidoc\ Deploy/labdocs'
+                    sh 'cd ~/labdocs'
                     script {
                         utils.packageProject()
                     }
