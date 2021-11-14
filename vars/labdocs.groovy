@@ -27,7 +27,6 @@ def call() {
                     script {
                         utils.configureAgent()
                     }
-                    sh 'cat ~/.ssh/id_rsa.pub'
                 }
             }
             stage('Clone Repository') {
