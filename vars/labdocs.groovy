@@ -17,6 +17,14 @@ def call() {
                         - sleep
                         args:
                         - infinity
+                      - name: maven
+                        image: maven:3.6.3-jdk-11
+                        securityContext:
+                          runAsUser: 1000
+                        command:
+                        - sleep
+                        args:
+                        - infinity
                 '''
                 defaultContainer 'builder'
             }
