@@ -29,25 +29,11 @@ def call() {
                     }
                 }
             }
-            stage('Clone Repository') {
+            stage('Clone Build and Deploy') {
                 steps  {
                     script {
                         utils.cloneRepo()
                     }
-                }
-            }
-            stage('Build and Package Project') {
-                steps  {
-                    sh 'cd /home/jenkins/agent/workspace/Labdocs Asciidoc Deploy/labdocs'
-                    script {
-                        utils.packageProject()
-                    }
-                }
-            }
-            stage('SCP Documents') {
-                steps {
-                   sh 'cd target/generated-docs'
-                   sh 'echo "Abc123" | sshpass scp -r * david@dell-nfs:/srv/nfs4/k8s/pvc-9a2fe61c-e5fb-4386-adf3-083caebece7d/'
                 }
             }
         }
