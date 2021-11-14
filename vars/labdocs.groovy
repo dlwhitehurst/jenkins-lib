@@ -48,7 +48,7 @@ def call() {
             stage('SCP Documents') {
                 steps {
                    sh 'cd target/generated-docs'
-                   sh 'scp -r * david@dell-nfs:/srv/nfs4/k8s/pvc-9a2fe61c-e5fb-4386-adf3-083caebece7d/'
+                   sh 'echo "Abc123" | sshpass scp -r * david@dell-nfs:/srv/nfs4/k8s/pvc-9a2fe61c-e5fb-4386-adf3-083caebece7d/'
                 }
             }
         }

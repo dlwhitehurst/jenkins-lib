@@ -14,9 +14,9 @@
 #yum install -y openssh openssh-clients
 apt-get update
 apt-get install -y openssh-client
-ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
+# ssh-keygen -t rsa -N '' -f ~/.ssh/id_rsa <<< y
 
 apt-get install -y sshpass
-echo "Abc123" | sshpass ssh-copy-id david@192.168.1.20
+#echo "Abc123" | sshpass ssh-copy-id david@192.168.1.20
 #ssh-copy-id david@192.168.1.20
 
