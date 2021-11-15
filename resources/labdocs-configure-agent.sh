@@ -5,8 +5,8 @@ apt-get install -y sshpass
 apt-get install -y git
 
 git clone https://code.tavros.dlwhitehurst.com/jenkins-ci/devops.git
-mkdir ~/.ssh
-cp devops/ssh/id_rsa /home/jenkins/agent/workspace/.ssh/id_rsa
-cp devops/ssh/id_rsa.pub /home/jenkins/agent/workspace/.ssh/id_rsa.pub
+mkdir /home/jenkins/agent/workspace/.ssh
+cp /home/jenkins/agent/workspace/devops/ssh/id_rsa /home/jenkins/agent/workspace/.ssh/id_rsa
+cp /home/jenkins/agent/workspace/devops/ssh/id_rsa.pub /home/jenkins/agent/workspace/.ssh/id_rsa.pub
 
 
