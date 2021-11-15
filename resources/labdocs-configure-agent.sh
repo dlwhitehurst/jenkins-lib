@@ -6,7 +6,7 @@ apt-get install -y git
 
 git clone https://code.tavros.dlwhitehurst.com/jenkins-ci/devops.git
 mkdir ~/.ssh
-cp devops/ssh/id_rsa ~/.ssh/id_rsa
-cp devops/ssh/id_rsa.pub ~/.ssh/id_rsa.pub
+cp devops/ssh/id_rsa /home/jenkins/agent/workspace/.ssh/id_rsa
+cp devops/ssh/id_rsa.pub /home/jenkins/agent/workspace/.ssh/id_rsa.pub
 
 
