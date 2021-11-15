@@ -11,7 +11,7 @@ apt-get update
 apt-get install -y nfs-common
 
 mkdir -p /mnt/k8s
-mount 192.168.1.20:/srv/nfs4/k8s
+mount 192.168.1.20:/srv/nfs4/k8s /mnt/k8s
 mkdir -p /mnt/k8s/apache
 
 cp -r * /mnt/k8s/apache/
