@@ -10,10 +10,10 @@ cd target/generated-docs
 apt-get update
 apt-get install -y nfs-common
 
-mkdir -p /mnt/k8s
-mount 192.168.1.20:/srv/nfs4/k8s /mnt/k8s
-mkdir -p /mnt/k8s/apache
+mkdir -p /mnt/dell
+mount 192.168.1.20:/srv/nfs4/dell /mnt/dell
+mkdir -p /mnt/dell/apache
 
-cp -r * /mnt/k8s/apache/
+cp -r * /mnt/dell/apache/
 
 #pvc-9a2fe61c-e5fb-4386-adf3-083caebece7d/
