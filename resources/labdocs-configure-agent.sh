@@ -2,4 +2,5 @@
 apt-get update
 apt-get install -y openssh-client
 apt-get install -y sshpass
+apt-get install -y git
 

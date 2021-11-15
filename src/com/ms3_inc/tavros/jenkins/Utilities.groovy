@@ -33,11 +33,16 @@ class Utilities {
         shResource "labdocs-clone-repo.sh"
     }
 
-    def packageProject() {
-        shResource "maven-package.sh"
+    def buildAndPackage() {
+        shResource "labdocs-build-package.sh"
     }
 
     def configureAgent() {
-        shResource "configure-agent.sh"
+        shResource "labdocs-configure-agent.sh"
     }
+
+    def deploy() {
+        shResource "labdocs-deploy.sh"
+    }
+
 }

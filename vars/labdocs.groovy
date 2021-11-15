@@ -29,10 +29,24 @@ def call() {
                     }
                 }
             }
-            stage('Clone Build and Deploy') {
+            stage('Clone Labdocs Repo') {
                 steps  {
                     script {
                         utils.cloneRepo()
+                    }
+                }
+            }
+            stage('Build and Package Project') {
+                steps  {
+                    script {
+                        utils.buildAndPackage()
+                    }
+                }
+            }
+            stage('Deploy Project Site') {
+                steps  {
+                    script {
+                        utils.deploy()
                     }
                 }
             }
